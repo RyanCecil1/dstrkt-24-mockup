@@ -1,0 +1,20 @@
+{
+  "mode": "deep",
+  "logos": [],
+  "colors": [
+    "rgb(255, 255, 255)",
+    "rgb(33, 37, 41)",
+    "rgb(0, 0, 0)",
+    "rgb(13, 110, 253)",
+    "rgb(255, 0, 0)"
+  ],
+  "status": "success",
+  "socials": [],
+  "finalUrl": "http://www.districtmanagement.net/d24menu/",
+  "pageCount": 1,
+  "startedAt": "2026-04-23T12:11:24.140Z",
+  "finishedAt": "2026-04-23T12:11:29.488Z",
+  "contactCount": 0,
+  "requestedUrl": "http://www.districtmanagement.net/d24menu",
+  "failureReason": null
+}

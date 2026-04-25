@@ -1,0 +1,37 @@
+{
+  "text": "AI SANDWICH\nGHC 99\n\nDeveloped by: Curly App | For: District Management",
+  "forms": [],
+  "links": [
+    {
+      "href": "https://curlyapp.net/dmfeedbackqr/contactpage.php?branch=Dstrkt%2024&manager=QRMENU",
+      "text": ""
+    },
+    {
+      "href": "https://www.curlyapp.net/",
+      "text": "Curly App"
+    },
+    {
+      "href": "http://districtmanagement.net/",
+      "text": "District Management"
+    }
+  ],
+  "logos": [],
+  "title": "D24 | Menu",
+  "colors": [
+    "rgb(255, 255, 255)",
+    "rgb(33, 37, 41)",
+    "rgb(0, 0, 0)",
+    "rgb(13, 110, 253)",
+    "rgb(255, 0, 0)"
+  ],
+  "contacts": [],
+  "ctaCount": 0,
+  "hasJsonLd": false,
+  "linkCount": 3,
+  "wordCount": 12,
+  "imageCount": 20,
+  "loadTimeMs": 514,
+  "headingCount": 0,
+  "responseStatus": 200,
+  "metaDescription": "dstrkt 24 | d24 food menu"
+}

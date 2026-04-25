@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dstrkt 24 | High-Fidelity Mockup</title>
+  <meta
+    name="description"
+    content="A high-fidelity landing-page mockup for Dstrkt 24, reframing the current menu experience into a premium hospitality destination."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #140f12;
+      --bg-soft: #21171b;
+      --panel: rgba(33, 23, 27, 0.78);
+      --panel-strong: rgba(20, 15, 18, 0.9);
+      --card: rgba(255, 255, 255, 0.05);
+      --line: rgba(255, 240, 228, 0.12);
+      --text: #fff3e7;
+      --muted: #d9c8b9;
+      --accent: #ff6a3d;
+      --accent-2: #f0b351;
+      --accent-3: #7c2215;
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --container: min(1180px, calc(100vw - 32px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Karla", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(255, 106, 61, 0.28), transparent 28%),
+        radial-gradient(circle at left 20%, rgba(240, 179, 81, 0.18), transparent 32%),
+        linear-gradient(180deg, #0e0b0d 0%, #171114 28%, #100c0e 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page-shell {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 20px 0 56px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 12px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding: 14px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(15, 12, 14, 0.72);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      background:
+        linear-gradient(145deg, rgba(255, 106, 61, 0.22), rgba(240, 179, 81, 0.08)),
+        rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark img {
+      width: 88%;
+      height: auto;
+      object-fit: contain;
+      filter: saturate(1.1);
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-copy span {
+      display: block;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      transition: 180ms ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      outline: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(110deg, rgba(15, 12, 14, 0.92) 0%, rgba(15, 12, 14, 0.76) 42%, rgba(15, 12, 14, 0.3) 100%),
+        url("http://www.districtmanagement.net/d24menu/pop/aisnd.jpeg") center/cover no-repeat;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -8% -25% auto;
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(255, 106, 61, 0.48), transparent 68%);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.9fr);
+      gap: 24px;
+      padding: 52px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffe4cf;
+    }
+
+    .hero h1,
+    .section-heading h2,
+    .story-card h3,
+    .footer-card h3 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+
+    .hero h1 {
+      max-width: 10ch;
+      font-size: clamp(3.4rem, 8vw, 6.7rem);
+    }
+
+    .hero p {
+      max-width: 33rem;
+      margin: 20px 0 0;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .button-primary {
+      color: #201313;
+      background: linear-gradient(135deg, var(--accent-2), #ffd2a0);
+      box-shadow: 0 14px 30px rgba(240, 179, 81, 0.22);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-meta {
+      display: grid;
+      align-content: end;
+      gap: 18px;
+    }
+
+    .hero-card,
+    .story-card,
+    .cta-strip,
+    .gallery-card,
+    .footer-card,
+    .menu-card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 24px;
+      border-radius: 26px;
+      align-self: end;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #ffd7be;
+    }
+
+    .hero-card strong {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stat {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .stat span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .stat strong {
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    section {
+      margin-top: 26px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .section-heading p {
+      max-width: 36rem;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .menu-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: end;
+    }
+
+    .menu-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10, 8, 10, 0.08) 0%, rgba(10, 8, 10, 0.86) 100%),
+        var(--image) center/cover no-repeat;
+      transition: transform 240ms ease;
+    }
+
+    .menu-card:hover::before,
+    .menu-card:focus-within::before {
+      transform: scale(1.04);
+    }
+
+    .menu-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-card.large {
+      grid-column: span 5;
+      min-height: 420px;
+    }
+
+    .menu-card.medium {
+      grid-column: span 4;
+    }
+
+    .menu-card.small {
+      grid-column: span 3;
+    }
+
+    .menu-card-content {
+      display: grid;
+      gap: 10px;
+      max-width: 18rem;
+    }
+
+    .menu-card span,
+    .gallery-card span,
+    .label {
+      display: inline-flex;
+      width: fit-content;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffe2d0;
+    }
+
+    .menu-card h3 {
+      margin: 0;
+      font-size: 1.65rem;
+      line-height: 1.05;
+    }
+
+    .menu-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 18px;
+    }
+
+    .story-card {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+    }
+
+    .story-card h3 {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+    }
+
+    .story-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .story-card + .story-card {
+      background:
+        linear-gradient(180deg, rgba(255, 106, 61, 0.09), rgba(255, 255, 255, 0.03)),
+        var(--panel);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill-list span {
+      padding: 11px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f3dbc8;
+      font-size: 0.93rem;
+    }
+
+    .cta-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      padding: 18px;
+      border-radius: var(--radius-lg);
+    }
+
+    .cta-link {
+      display: grid;
+      gap: 6px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: 180ms ease;
+      min-height: 118px;
+    }
+
+    .cta-link:hover,
+    .cta-link:focus-visible {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .cta-link strong {
+      font-size: 1.05rem;
+    }
+
+    .cta-link span:last-child {
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: end;
+      padding: 18px;
+    }
+
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(15, 12, 14, 0.12) 10%, rgba(15, 12, 14, 0.88) 100%),
+        var(--image) center/cover no-repeat;
+      transition: transform 240ms ease;
+    }
+
+    .gallery-card:hover::before,
+    .gallery-card:focus-within::before {
+      transform: scale(1.04);
+    }
+
+    .gallery-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .gallery-card h3 {
+      margin: 10px 0 6px;
+      font-size: 1.35rem;
+    }
+
+    .gallery-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+      gap: 18px;
+    }
+
+    .footer-card {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+    }
+
+    .footer-card h3 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .footer-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer-meta {
+      display: grid;
+      gap: 12px;
+    }
+
+    .footer-meta a,
+    .footer-meta div {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: #f8e7d8;
+    }
+
+    .fine-print {
+      margin-top: 20px;
+      color: rgba(255, 243, 231, 0.62);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      animation: rise 700ms ease forwards;
+    }
+
+    .delay-1 { animation-delay: 100ms; }
+    .delay-2 { animation-delay: 180ms; }
+    .delay-3 { animation-delay: 260ms; }
+    .delay-4 { animation-delay: 340ms; }
+    .delay-5 { animation-delay: 420ms; }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .story-layout,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .menu-card.large,
+      .menu-card.medium {
+        grid-column: span 6;
+      }
+
+      .menu-card.small {
+        grid-column: span 6;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page-shell {
+        padding-top: 14px;
+        padding-bottom: 28px;
+      }
+
+      .topbar {
+        position: static;
+        border-radius: 26px;
+        padding: 16px;
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .nav {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero-grid {
+        padding: 24px;
+      }
+
+      .hero h1 {
+        max-width: none;
+      }
+
+      .stat-row,
+      .cta-strip,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-card.large,
+      .menu-card.medium,
+      .menu-card.small {
+        grid-column: auto;
+        min-height: 280px;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar reveal">
+      <a class="brand" href="#top" aria-label="Dstrkt 24 mockup home">
+        <div class="brand-mark">
+          <img
+            src="http://districtmanagement.net/d24/wp-content/uploads/2023/07/logo-300x135.png"
+            alt="Dstrkt 24 logo"
+          />
+        </div>
+        <div class="brand-copy">
+          <span>District Management Venue</span>
+          <strong>Dstrkt 24</strong>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Section navigation">
+        <a href="#menu-preview">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#visit">Visit</a>
+        <a href="#social">Social</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal delay-1" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Accra nightlife energy, recut for the web</div>
+            <h1 id="hero-title">Dstrkt 24, but finally worth the first click.</h1>
+            <p>
+              This concept turns the current image-stack menu into a richer hospitality experience:
+              one that still points visitors to the live menu, directions, contact, and feedback flow,
+              but sells the atmosphere before asking them to act.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="http://districtmanagement.net/d24menu" target="_blank" rel="noreferrer">View Menu</a>
+              <a class="button button-secondary" href="https://goo.gl/maps/YFVgNqwBgEpe2QL86" target="_blank" rel="noreferrer">Get Directions</a>
+            </div>
+          </div>
+
+          <div class="hero-meta">
+            <aside class="hero-card">
+              <h2>Live Menu Highlight</h2>
+              <strong>AI Sandwich</strong>
+              <p>GHC 99 on the current menu. Reframed here as a featured signature instead of a surprise popup.</p>
+            </aside>
+
+            <div class="stat-row" aria-label="Verified brand cues">
+              <div class="stat">
+                <span>CTA</span>
+                <strong>Menu first, no modal trap</strong>
+              </div>
+              <div class="stat">
+                <span>Social</span>
+                <strong>@dstrkt_24</strong>
+              </div>
+              <div class="stat">
+                <span>Parent</span>
+                <strong>District Management</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu-preview" class="reveal delay-2" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <div class="label">Menu Preview</div>
+            <h2 id="menu-title">From giant flat images to a menu people can actually explore.</h2>
+          </div>
+          <p>
+            The current page exposes real categories like breakfast, pizza, sandwiches, kids, vegan, and beverages.
+            This mockup turns those cues into tappable highlights while keeping the live menu as the source of truth.
+          </p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card large" style="--image: url('http://www.districtmanagement.net/d24menu/pop/aisnd.jpeg');">
+            <div class="menu-card-content">
+              <span>Featured Today</span>
+              <h3>AI Sandwich</h3>
+              <p>Verified from the live menu with the current listed price of GHC 99.</p>
+              <a class="button button-secondary" href="http://districtmanagement.net/d24menu/#sand" target="_blank" rel="noreferrer">Open Sandwiches</a>
+            </div>
+          </article>
+
+          <article class="menu-card medium" style="--image: url('http://www.districtmanagement.net/d24menu/nov1/3.jpg');">
+            <div class="menu-card-content">
+              <span>Morning Crowd</span>
+              <h3>Breakfast</h3>
+              <p>Anchored to the live breakfast section instead of making guests scroll a long image feed.</p>
+              <a class="button button-secondary" href="http://districtmanagement.net/d24menu/#breakfast" target="_blank" rel="noreferrer">See Breakfast</a>
+            </div>
+          </article>
+
+          <article class="menu-card small" style="--image: url('http://www.districtmanagement.net/d24menu/nov1/6.jpg');">
+            <div class="menu-card-content">
+              <span>Shareable</span>
+              <h3>Pizza</h3>
+              <p>Fast route to one of the live categories.</p>
+            </div>
+          </article>
+
+          <article class="menu-card small" style="--image: url('http://www.districtmanagement.net/d24menu/nov1/11.jpg');">
+            <div class="menu-card-content">
+              <span>Pairings</span>
+              <h3>Beverages</h3>
+              <p>Surfaced as a primary browse path.</p>
+            </div>
+          </article>
+
+          <article class="menu-card medium" style="--image: url('http://www.districtmanagement.net/d24menu/nov1/10.jpg');">
+            <div class="menu-card-content">
+              <span>Inclusive Picks</span>
+              <h3>Vegan and More</h3>
+              <p>Real category language, presented with a premium visual frame.</p>
+              <a class="button button-secondary" href="http://districtmanagement.net/d24menu/#vegan" target="_blank" rel="noreferrer">Open Vegan</a>
+            </div>
+          </article>
+
+          <article class="menu-card medium" style="--image: url('http://www.districtmanagement.net/d24menu/nov1/9.jpg');">
+            <div class="menu-card-content">
+              <span>Group Friendly</span>
+              <h3>Kids and Family Options</h3>
+              <p>Another live section converted into cleaner navigation.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="story" class="reveal delay-3" aria-labelledby="story-title">
+        <div class="story-layout">
+          <article class="story-card">
+            <div class="label">Brand Story</div>
+            <h3 id="story-title">A sharper mood, a clearer next step, the same destination.</h3>
+            <p>
+              Dstrkt 24 already has the ingredients of a stronger digital presence: an identifiable logo,
+              active social presence, direct contact paths, and a menu with broad category depth.
+              What it lacks is curation. This concept gives the venue an arrival moment before the menu,
+              so guests feel the brand first and browse second.
+            </p>
+            <div class="pill-list" aria-label="Brand attributes">
+              <span>Warm contrast palette</span>
+              <span>Editorial typography</span>
+              <span>Mobile-first CTA flow</span>
+              <span>Menu linked to live source</span>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <div class="label">What Changed</div>
+            <h3>No auto-popup. No dead-end gallery. No guessing.</h3>
+            <p>
+              The redesign leads with a hero, promotes a current signature item, surfaces the live menu by category,
+              then brings in contact, location, Instagram, and feedback as obvious actions. It still respects the
+              current ecosystem, but packages it like a real hospitality brand.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="visit" class="reveal delay-4" aria-labelledby="visit-title">
+        <div class="section-heading">
+          <div>
+            <div class="label">Visit and Contact</div>
+            <h2 id="visit-title">Everything actionable, all in one clean strip.</h2>
+          </div>
+          <p>
+            These actions are grounded in the live parent site and linked properties. The difference is presentation:
+            they now feel deliberate, not buried.
+          </p>
+        </div>
+
+        <div class="cta-strip">
+          <a class="cta-link" href="http://districtmanagement.net/d24menu" target="_blank" rel="noreferrer">
+            <span>Primary</span>
+            <strong>View Menu</strong>
+            <span>Jump straight to the current Dstrkt 24 menu.</span>
+          </a>
+
+          <a class="cta-link" href="https://goo.gl/maps/YFVgNqwBgEpe2QL86" target="_blank" rel="noreferrer">
+            <span>Location</span>
+            <strong>Get Directions</strong>
+            <span>Uses the public Google Maps destination surfaced on District Management.</span>
+          </a>
+
+          <a class="cta-link" href="tel:+233551506666">
+            <span>Contact</span>
+            <strong>Call Dstrkt 24</strong>
+            <span>Verified phone action from the parent site listing.</span>
+          </a>
+
+          <a class="cta-link" href="https://curlyapp.net/dmfeedbackqr/contactpage.php?branch=Dstrkt%2024&amp;manager=QRMENU" target="_blank" rel="noreferrer">
+            <span>Guest Voice</span>
+            <strong>Open Feedback</strong>
+            <span>Keeps the existing feedback flow but presents it as a choice, not the whole experience.</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="social" class="reveal delay-5" aria-labelledby="social-title">
+        <div class="section-heading">
+          <div>
+            <div class="label">Social Proof</div>
+            <h2 id="social-title">Let the venue feel alive before anyone commits.</h2>
+          </div>
+          <p>
+            Instead of relying on hard-coded claims we cannot verify, this concept uses social presence,
+            menu imagery, and atmosphere framing to create confidence.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card" style="--image: url('http://www.districtmanagement.net/d24menu/d24men/feedback.jpg');">
+            <div>
+              <span>Community</span>
+              <h3>Feedback, reframed.</h3>
+              <p>The live guest-feedback mechanic becomes a supporting trust layer instead of the main screen.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card" style="--image: url('http://www.districtmanagement.net/d24menu/nov1/8.jpg');">
+            <div>
+              <span>Browse</span>
+              <h3>Menus with atmosphere.</h3>
+              <p>Actual Dstrkt 24 menu imagery, art-directed into a more premium story flow.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card" style="--image: url('http://www.districtmanagement.net/d24menu/nov1/1.jpg');">
+            <div>
+              <span>Social</span>
+              <h3>Follow the live channel.</h3>
+              <p>
+                Keep the audience moving with a clear path to
+                <a href="https://www.instagram.com/dstrkt_24" target="_blank" rel="noreferrer">@dstrkt_24</a>.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="reveal delay-5" aria-labelledby="footer-title">
+        <div class="footer-grid">
+          <article class="footer-card">
+            <div class="label">Pitch Outcome</div>
+            <h3 id="footer-title">A page the target can say yes to.</h3>
+            <p>
+              The mockup keeps Dstrkt 24 recognizable while making it look far more intentional: stronger first impression,
+              cleaner mobile browsing, clearer action paths, and a more premium frame for the same live venue.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="http://districtmanagement.net/d24menu" target="_blank" rel="noreferrer">Compare With Live Page</a>
+              <a class="button button-secondary" href="https://www.instagram.com/dstrkt_24" target="_blank" rel="noreferrer">Open Instagram</a>
+            </div>
+          </article>
+
+          <aside class="footer-card">
+            <div class="label">District Management</div>
+            <div class="footer-meta">
+              <div>Parent brand: District Management</div>
+              <a href="mailto:info@districtmanagement.com">info@districtmanagement.com</a>
+              <a href="tel:+233551622666">+233 551622666</a>
+              <a href="http://districtmanagement.net/" target="_blank" rel="noreferrer">districtmanagement.net</a>
+            </div>
+            <p class="fine-print">
+              This is a speculative high-fidelity mockup built from publicly visible cues on the current Dstrkt 24 and
+              District Management properties on April 25, 2026. It avoids invented awards, hours, delivery partners,
+              or reservation tooling.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

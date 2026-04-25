@@ -1,0 +1,29 @@
+[
+  {
+    "id": "710079cb-aa7f-4867-a474-4f1330baf8d5",
+    "lead_id": "96c86497-e7e2-46f7-a66e-265b377cbed6",
+    "mode": "deep",
+    "status": "success",
+    "started_at": "2026-04-23T12:11:24.14+00:00",
+    "finished_at": "2026-04-23T12:11:29.488+00:00",
+    "failure_reason": null,
+    "evidence": {
+      "forms": 0,
+      "emails": 0,
+      "phones": 0,
+      "ctaCount": 0,
+      "offerHits": 1,
+      "pageCount": 1,
+      "trustHits": 0,
+      "loadTimeMs": 514,
+      "totalWords": 12,
+      "socialCount": 0,
+      "freshnessHits": 0,
+      "screenshotUrl": "https://wdwkydwxulcqxklrxjwv.supabase.co/storage/v1/object/public/lead-assets/screenshots/96c86497-e7e2-46f7-a66e-265b377cbed6-1776946288295.png",
+      "responseStatus": 200,
+      "hasViewportMeta": true,
+      "horizontalOverflow": 0
+    },
+    "created_at": "2026-04-23T12:11:30.03182+00:00"
+  }
+]

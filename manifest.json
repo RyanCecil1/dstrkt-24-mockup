@@ -1,0 +1,109 @@
+{
+  "lead_id": "96c86497-e7e2-46f7-a66e-265b377cbed6",
+  "business_name": "Dstrkt 24 | District 24",
+  "website_url": "http://www.districtmanagement.net/d24menu",
+  "generated_at": "2026-04-25T14:48:04.828Z",
+  "brief_status": "complete",
+  "deliverables_ready": true,
+  "formats": [
+    "json",
+    "zip",
+    "brief-md",
+    "contacts-csv"
+  ],
+  "latest_deep_artifact_count": 5,
+  "summary": {
+    "page_count": 1,
+    "contact_count": 0,
+    "artifact_count": 5,
+    "screenshot_count": 1,
+    "crawl_run_count": 1,
+    "outreach_available": true
+  },
+  "files": [
+    {
+      "path": "manifest.json",
+      "contentType": "application/json",
+      "source": "generated",
+      "included_in_archive": true
+    },
+    {
+      "path": "brief/brief.md",
+      "contentType": "text/markdown",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 1018
+    },
+    {
+      "path": "brief/brief.json",
+      "contentType": "application/json",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 1872
+    },
+    {
+      "path": "contacts/contacts.json",
+      "contentType": "application/json",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 2
+    },
+    {
+      "path": "contacts/contacts.csv",
+      "contentType": "text/csv",
+      "source": "generated",
+      "included_in_archive": true,
+      "bytes": null
+    },
+    {
+      "path": "crawl/crawl-runs.json",
+      "contentType": "application/json",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 871
+    },
+    {
+      "path": "crawl/summary.json",
+      "contentType": "application/json",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 483
+    },
+    {
+      "path": "crawl/brand.json",
+      "contentType": "application/json",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 168
+    },
+    {
+      "path": "crawl/pages/01-d24-menu.json",
+      "contentType": "application/json",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 836
+    },
+    {
+      "path": "crawl/pages/01-d24-menu.md",
+      "contentType": "text/markdown",
+      "source": "generated",
+      "included_in_archive": true,
+      "bytes": 478
+    },
+    {
+      "path": "screenshots/96c86497-e7e2-46f7-a66e-265b377cbed6-1776946288295.png",
+      "contentType": "image/png",
+      "source": "storage_url",
+      "included_in_archive": true,
+      "url": "https://wdwkydwxulcqxklrxjwv.supabase.co/storage/v1/object/public/lead-assets/screenshots/96c86497-e7e2-46f7-a66e-265b377cbed6-1776946288295.png",
+      "bytes": 887509
+    },
+    {
+      "path": "outreach/latest-draft.txt",
+      "contentType": "text/plain",
+      "source": "database",
+      "included_in_archive": true,
+      "bytes": 495
+    }
+  ]
+}
